@@ -3,7 +3,7 @@ layout: post
 title: "Autoannotate (Latin)"
 ---
 
-# {{ page.title }}
+{% include JB/setup %}
 
 [http://vm-0.dabbler.kd.io:8080](http://vm-0.dabbler.kd.io:8080)
 
@@ -11,6 +11,7 @@ title: "Autoannotate (Latin)"
 ## Conception
   Another hack from Latin class. I expect over a third of my time doing Latin homework is spent turning pages in my book to look at line notes or the dictionary. I can fix the second one by automating word lookup.
 
+<!--more-->
 ## Tech
   It's going to be a webapp, frontend in CoffeeScript, backend in nodejs + CoffeeScript. For a dictionary, I'm going to use William Whitaker's [words] tool.
 
