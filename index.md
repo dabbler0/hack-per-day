@@ -2,6 +2,7 @@
 layout: page
 title: One Hack Per Day
 ---
+{% include JB/setup %}
 
 <ul class="posts">
   {% for post in site.posts %}
