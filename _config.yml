@@ -8,14 +8,11 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap
-tagline: Site Tagline
+title : One Hack Per Day
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Anthony Bau
+  email : dab1998@gmail.com
+  github : dabbler0
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
@@ -26,6 +23,8 @@ author :
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 production_url : http://dabbler0.github.io/hack-per-day/
+
+excerpt_separator: "<!--more-->"
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -80,13 +79,13 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : intensedebate
     disqus :
       short_name : jekyllbootstrap
     livefyre :
       site_id : 123
     intensedebate :
-      account : 123abc
+      account : dabbler0
     facebook :
       appid : 123
       num_posts: 5
