@@ -2,6 +2,7 @@
 layout: page
 title: One Hack Per Day
 ---
+
 <ul class="posts">
   {% for post in site.posts %}
     <li>
