@@ -1,6 +1,12 @@
 ---
 layout: post
 title: "Autoannotate (Latin)"
+tags:
+- latin
+- scripts
+- browser
+- coffeescript
+- Koding
 ---
 
 {% include JB/setup %}
@@ -19,7 +25,7 @@ title: "Autoannotate (Latin)"
 ## Hack
   So, my first thought with this hack was to fork Whitaker's tool and port it to CoffeeScript. Unfortunately, it is written in Ada, a language I do not understand and do not have the time to learn for this hack. So, I am just going to shell out to his tool.
 
-  The first task is to make a RESTFUL api version of his tool. I set this up without much difficulty -- I just shell out and spit the result at the client. I flirted briefly with coming up with a well-defined JSON format for it, then decided that I didn't know what format he outputted things in, and that the end-user would probably like his format better than any I could come up with anyway.
+  The first task is to make a RESTful api version of his tool. I set this up without much difficulty -- I just shell out and spit the result at the client. I flirted briefly with coming up with a well-defined JSON format for it, then decided that I didn't know what format he outputted things in, and that the end-user would probably like his format better than any I could come up with anyway.
 
   Next task is to write the frontend. There's going to be a textarea there, and after you input, it will somehow annotate for you. I decided to use jquery tooltipster for the annotations, and show annotations on click or hover (ultimately deciding on hover). My first UI iteration had the textarea in the top half of the screen and the annotated text in the bottom half, and update on textarea `input`. I decided that this was ugly and informationally redundant, and collapsed it all into the square you see now.
 
