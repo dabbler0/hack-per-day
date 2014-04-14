@@ -31,6 +31,8 @@ tags:
 
   I decided that I didn't want to have to type all the words in myself, since Cicero's Oratio In Catilinam I (the text we're working with at the moment) is a very clearly out-of-copyright text that I can scrape with no problem. I scraped it from [this archive](http://www.thelatinlibrary.com/cicero/cat1.shtml) with no problems. For serving, I just line-break-separated it in a file and had the server serve the nth line of the file as the text.
 
+  One bug fix: Whiatker's Words is not actually designed as an stdin/stdout application, but as a command-line tool. So it does a "more"-like "press enter to continue", which hangs the server sometimes when the process does not finish. So I need to watch for the "press more to continue" line and feed a newline to stdin whenever I see it. Great, now everything works.
+
   So now I've successfully annotated all of In Catilinam I! All I need to do now is
 
 ## Launch
