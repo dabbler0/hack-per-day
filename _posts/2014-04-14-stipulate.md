@@ -107,7 +107,7 @@ SOLVE (varname) | (left_expression) = (right_expression)
 ```
 a + b * c + d
 ```
-  *Even though it computes correctly*. I briefly considered doing something ICE-editor like with parents telling children to wrap themselves in parens. But instead I decided that it would be decent behavior just to have parens in whever there were parens in the srouce code. So I did that, with little difficulty.
+  *Even though it computes correctly*. I briefly considered doing something ICE-editor-like with parents telling children to wrap themselves in parens. But instead I decided that it would be decent behavior just to have parens in whever there were parens in the source code. So I did that, with little difficulty.
 
   UI time. I put the textarea on the left and the JAX on the right. This seems to work just fine.
 
