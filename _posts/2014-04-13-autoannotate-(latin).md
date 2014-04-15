@@ -12,9 +12,7 @@ tags:
 {% include JB/setup %}
 
 ## Demo
-[http://vm-0.dabbler.kd.io:8080](http://vm-0.dabbler.kd.io:8080)
-
-*NOTE*: This is a development server from a development service. It is not on until I personally turn it on for a short, timed session. I'm shopping around for a real hosting service on which I can run this Ada app.
+[http://ecc.exeter.edu:8080](http://ecc.exeter.edu:8080)
 
 ## Conception
   Another hack from Latin class. I expect over a third of my time doing Latin homework is spent turning pages in my book to look at line notes or the dictionary. I can fix the second one by automating word lookup.
@@ -43,6 +41,8 @@ tags:
   Well, sort of. I registered for a [Koding] account a while back while I was working on an IDE to check out how other people did it. And it turns out Koding gives us all free VMs. Which is great for this project, because I need a VM where I have free reign. So I'm running off Koding.
 
   *UPDATE*: Of course, Koding's VMs are for development purpose only and are not production machines. Koding turns off a VM after 15 minutes; I need to manually turn it back on (and I'm pretty sure having a bot do that violates EULA). Anyway, so you probably won't be able to see the demo unless I'm looking at it at the same time. I'm shopping around for a better hosting service.
+
+  *UPDATE*: A lot of my Latin classmates want to use this tool, so I'm abusing my priveleges a bit and hosting it on the Exeter Computing Club server.
 
   I may want to actually port Words to CoffeeScript sometime later, but that will require me to either learn more Latin or learn Ada, which is more of a "week" thing than a "couple hours".
 
