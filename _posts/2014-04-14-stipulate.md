@@ -115,7 +115,7 @@ a + b * c + d
 
   Demo time. I'll put in a default document.
 
-  *TODO:* I ditched the idea to have this do dimensional analysis with units. That'll be very easy to implement, though, and I'll do it either tomorrow or on the weekend. Also, I want to be able to export this to a pdf, (might require some server-side). Hacks for tomorrow, or the weekend!
+  *TODO:* I ditched the idea to have this do dimensional analysis with units. That'll be very easy to implement, though. Also, I want to be able to export this to a pdf (might require some server-side). Hacks for tomorrow, or the weekend!
 
 ## Launch
   It's a static page, so I can use Github Pages.
