@@ -20,7 +20,7 @@ tags:
 *Note*: there are currently NO conversation paths you can add to on this demo. This means you won't be able to do anything. Wait a day or so, I'll add some seeds.
 
 ## Conception
-A hack inspired by [this xkcd][xkcd] and The Social Network. I want to do something webcomicky without doing anything. This'll be done by having the whole "comic" be a self-moderating forum where people suggest responses for a script of witty banter. Voting up/down will be done by Social Network-style comparison using [Elo's chess ranking algorithm][elo]. At the end of every day we'll prune all the bad stuff and ultimately get a tree of some good, dry witty banter.
+A hack inspired by [this xkcd][xkcd] and [The Social Network][snetwork]. I want to do something webcomicky without doing anything. This'll be done by having the whole "comic" be a self-moderating forum where people suggest responses for a script of witty banter. Voting up/down will be done by Social Network-style comparison using [Elo's chess ranking algorithm][elo]. At the end of every day we'll prune all the bad stuff and ultimately get a tree of some good, dry witty banter.
 
 <!--more-->
 
@@ -44,3 +44,8 @@ Performance issue: read op sometimes takes a while. I'm not dealing with this, i
 
 ## Launch
 All I need to do with GAE is push! It's live. This was a startingly easy hack (I give most of my thanks to GAE), which is good, because I had a lot less time today for hacking.
+
+[xkcd]: http://xkcd.com/1350/
+[pencilcode.net]: http://pencilcode.net
+[elo]: http://en.wikipedia.org/wiki/Elo_rating_system
+[snetwork]: http://en.wikipedia.org/wiki/The_Social_Network
