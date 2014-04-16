@@ -17,8 +17,6 @@ tags:
 
 [http://crowdsourced-banter.appspot.com](http://crowdsourced-banter.appspot.com)
 
-*Note*: there are currently NO conversation paths you can add to on this demo. This means you won't be able to do anything. Wait a day or so, I'll add some seeds.
-
 ## Conception
 A hack inspired by [this xkcd][xkcd] and [The Social Network][snetwork]. I want to do something webcomicky without doing anything. This'll be done by having the whole "comic" be a self-moderating forum where people suggest responses for a script of witty banter. Voting up/down will be done by Social Network-style comparison using [Elo's chess ranking algorithm][elo]. At the end of every day we'll prune all the bad stuff and ultimately get a tree of some good, dry witty banter.
 
