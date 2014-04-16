@@ -21,6 +21,7 @@ tags:
 
 ## Conception
 A hack inspired by [this xkcd][xkcd] and The Social Network. I want to do something webcomicky without doing anything. This'll be done by having the whole "comic" be a self-moderating forum where people suggest responses for a script of witty banter. Voting up/down will be done by Social Network-style comparison using [Elo's chess ranking algorithm][elo]. At the end of every day we'll prune all the bad stuff and ultimately get a tree of some good, dry witty banter.
+<!--more-->
 
 ## Tech
 This kind of simple data I/O is perfect for GAE's frameworks, so I'll be hosting there. Frontend is a standard kind of interaction, so Bootstrap is a good option for frontend styling. Frontend scripts will be in CoffeeScript, as always.
