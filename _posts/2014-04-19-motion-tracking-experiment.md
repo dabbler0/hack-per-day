@@ -21,6 +21,8 @@ tags:
 
 This has almost certainly been done before, but I wanted to get some experience with image processing. The idea is to make a motion tracking interface that can identify a moving object. There are bunch of standard solutions to this, the most widely-used one being optic flow, but I'm starting simple and implementing absolute diffs and mean-shift colour tracking.
 
+<!-- more -->
+
 ## Tech
 This is going to be static, built in CoffeeScript on the getUserMedia web api.
 
