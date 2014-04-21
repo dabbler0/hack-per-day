@@ -19,10 +19,10 @@ I've been trying to implement a phase vocoder for a while, first in C, then off-
 <!--more-->
 
 # Tech
-I'm going to be using [fftw3] (The Fastest Fourier Transform in the West) for my FFTs. This means I'm going to have to build some node.js bindings for it. It's going to be a node.js app in CoffeeScript.
+I'm going to be using [fftw3] for my FFTs. This means I'm going to have to build some node.js bindings for it. It's going to be a node.js app in CoffeeScript.
 
 ## Hack
-Okay, first thing is to build node.js bindings for fftw3. First I'm going to see if anyone else has done this for me -- yep, [Brian Padalino][bpadalino] seems to have done it as an exercise. Unfortunately, though he build it for node.js **<0.5.0**, which uses a different event system than node.js **0.10.0**, which I'll be using. So I have to modify this to work. Node.js migrated from `EIO` to `libuv`; I don't know what the difference is, but "how to upgrade" is well-documented, so I went ahead and upgraded Brian's code to node 0.10.0. I wrote a few unit tests and the fft seems to be working fine. Great, time to move on.
+Okay, first thing is to build node.js bindings for fftw3. First I'm going to see if anyone else has done this for me -- yep, [Brian Padalino][bpadalino] seems to have done it as an exercise. Unfortunately, though he build it for node.js **&lt;0.5.0**, which uses a different event system than node.js **0.10.0**, which I'll be using. So I have to modify this to work. Node.js migrated from `EIO` to `libuv`; I don't know what the difference is, but "how to upgrade" is well-documented, so I went ahead and upgraded Brian's code to node 0.10.0. I wrote a few unit tests and the fft seems to be working fine. Great, time to move on.
 
 Okay, time to implement the Paulstretch algorithm. It's a little amusing, because the most frustrating piece of writing my phase vocoder earlier was getting the phases to align, and one of Paul's comments is literally "Discard the original phases and put random phases". Welp, I seem pretty dumb.
 
@@ -54,3 +54,4 @@ I'm launching to the npm official repo. npm makes this very easy.
 [paulstretch]: http://hypermammut.sourceforge.net/paulstretch/
 [optimist]: https://github.com/substack/node-optimist
 [fftw3]: http://www.fftw.org/
+[numericjs]: http://www.numericjs.com/
