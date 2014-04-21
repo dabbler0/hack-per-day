@@ -19,7 +19,7 @@ tags:
 [http://twitch-plays-go.herokuapp.com](http://twitch-plays-go.herokuapp.com)
 
 ## Conception
-This hack idea came from Calvin Luo, who wanted to make a spin-off of [Twitch Plays Pokemon][tpokemon] (of which I had never heard until then; oh well). I felt a little guilty posting something so undemoable today, and this was a very easy concept, so I implemented it.
+This hack idea came from Calvin Luo, who wanted to make a spin-off of [Twitch Plays Pokemon][tpokemon] (of which I had never heard until then; oh well). I felt a little guilty about not posting a demo for the [phase vocoder][pvoc] today, and this was a very easy concept, so I implemented it.
 <!--more-->
 
 ## Tech
@@ -39,3 +39,4 @@ I'm launching to heroku. It turns out Heroku actually has a 5-app limit for devs
 
 [socketio]: http://socket.io/#home
 [tpokemon]: http://www.twitch.tv/twitchplayspokemon
+[pvoc]: http://dabbler0.github.io/hack-per-day/2014/04/20/coffeescript-phase-vocoder/
