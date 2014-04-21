@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "CoffeeScript Phase Vocoder"
+date: 2014-04-20 20:00:00
 description: ""
 category: 
 tags:
