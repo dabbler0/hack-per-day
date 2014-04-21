@@ -49,3 +49,8 @@ Okay, time to wrap this as an npm module. I've never actually done this before, 
 
 ## Launch
 I'm launching to the npm official repo. npm makes this very easy.
+
+[bpadalino]: https://github.com/bpadalino/node_fftw/
+[paulstretch]: http://hypermammut.sourceforge.net/paulstretch/
+[optimist]: https://github.com/substack/node-optimist
+[fftw3]: http://www.fftw.org/
