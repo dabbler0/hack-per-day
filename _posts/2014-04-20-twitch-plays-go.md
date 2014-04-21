@@ -26,7 +26,7 @@ This hack idea came from Calvin Luo, who wanted to make a spin-off of [Twitch Pl
 It's going to be a CoffeeScript webapp on the html5 canvas, leveraging websockets with [socket.io][socketio]. I'll probably host on Heroku, since it's the only free service I know offering websocktes.
 
 ## Hack
-Okay, game logic first. I'll lay down some boilerplate OOP; fundamental data type is a Board (this is probably just dogmatic, but oh well, I'll keep it anway). Meatiest part of this hack will be the `place` operation, which will have to do a bfs to determine whether pieces need to be removed. The way I implemented it, search is actually done in dfs order, but that's fine. I can tell when a piece needs to be removed.GA
+Okay, game logic first. I'll lay down some boilerplate OOP; fundamental data type is a Board (this is probably just dogmatic, but oh well, I'll keep it anway). Meatiest part of this hack will be the `place` operation, which will have to do a bfs to determine whether pieces need to be removed. The way I implemented it, search is actually done in dfs order, but that's fine. I can tell when a piece needs to be removed.
 
 I first started with a nodejs `readline` interface for a simple person-vs-self command-line version of Go. This went up pretty quickly.
 
