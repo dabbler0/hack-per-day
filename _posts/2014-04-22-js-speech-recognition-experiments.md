@@ -12,6 +12,7 @@ tags: []
 
 ## Conception
 So I've successfully made a phase vocoder. Sometime in the future I'll want to try beat detection, but what seems a little easier is naive speech recognition -- just distinguishing between two vowel sounds, say "eh" and "oo". Apparently the standing way to do this is cosine similarity on a fourier transform. So that's what I'll be implementing today.
+<!--more-->
 
 ## Tech
 It'll be a static webpage in CoffeeScript, on the `getUserMedia` and `AudioContext` apis.
