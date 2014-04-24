@@ -29,9 +29,9 @@ Okay, first thing to do is to get a real-time DFFT of sound data. Locally I did 
 
 Okay, time to implement cosine similarity. This is very easy. I'm going to try to be disciplined here and use typed arrays wherever possible, because our window sizes are going to be constant.
 
-This tests all right. The issue is that cosine similarity treats each frequency independently, so the algorithm becomes _very_ sensitive to pitch changes. So I'm flirting with moving to [Proscutes distance][pdistance] as a measure.
+This tests all right. The issue is that cosine similarity treats each frequency independently, so the algorithm becomes _very_ sensitive to pitch changes. So I'm flirting with moving to [Procrustes distance][pdistance] as a measure.
 
-Okay, I'm going to try Proscutes Distance. Boilerplate OOP: a `ProscutesFunction` can be translated and scaled. I'm only doing partial analysis because I don't expect data to have rotations or reflections applied. Implementation of Proscutes is not difficult. However, I am getting rather inaccurate results, so I am going to move back to cosine similarity.
+Okay, I'm going to try Procrustes Distance. Boilerplate OOP: a `ProcrustesFunction` can be translated and scaled. I'm only doing partial analysis because I don't expect data to have rotations or reflections applied. Implementation of Procrustes is not difficult. However, I am getting rather inaccurate results, so I am going to move back to cosine similarity.
 
 Okay, back at cosine similarity. Time to implement some activation thresholds. This is hack, and I don't really want to rigorise this, so after staring a little while at `-log(1 - cosine_similarity)` I've determined that we want to trigger whenever this value goes above 5. So I put this up. To kind of "dehackify" it some, I'll measure this relative to the average `-log(1 - cosine_similarity)` value -- my arbitrary threshold will then be `-log(1 - cosine_similarity) > 0.5 + avg(-log(1 - cosine_similarity))`. To compute this average, I'm going to be a little lazy and just have a geometric rolling average; each new average is a weighted average of the last average and the new value. This has some advantages; for instance, if ambient sound changes, the system can adjust. Mainly, though I didn't want to do proper sampling, so I did this instead. It throws off the beginning of collection, but that's okay.
 
@@ -39,3 +39,6 @@ Okay, demo time. I'll just throw up a simple Bootstrap UI and have some "recordi
 
 ## Launch
 It's static, so I can launch to github pages.
+
+[jsfft]: https://github.com/dntj/jsfft
+[pdistance]: http://en.wikipedia.org/wiki/Procrustes_analysis
