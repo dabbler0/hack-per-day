@@ -54,3 +54,4 @@ Okay, now the game's really done. This was mainly meant as a tutorial for me; my
 It's static, so I can use github pages.
 
 [phaser]: http://phaser.io
+[svgedit]: https://code.google.com/p/svg-edit/
