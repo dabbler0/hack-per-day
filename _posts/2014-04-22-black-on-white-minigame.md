@@ -2,8 +2,13 @@
 layout: post
 title: "Black on White (minigame)"
 description: ""
-category: 
-tags: []
+category:
+tags:
+- games
+- phaser
+- coffeescript
+- browser
+- github_pages
 ---
 {% include JB/setup %}
 
@@ -47,3 +52,5 @@ Okay, now the game's really done. This was mainly meant as a tutorial for me; my
 
 ## Launch
 It's static, so I can use github pages.
+
+[phaser]: http://phaser.io

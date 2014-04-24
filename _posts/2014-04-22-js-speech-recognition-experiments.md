@@ -3,7 +3,14 @@ layout: post
 title: "JS Speech Recognition Experiments"
 description: ""
 category: 
-tags: []
+tags:
+- sound
+- signal_analysis
+- coffeescript
+- getUserMedia
+- webaudio
+- browser
+- github_pages
 ---
 {% include JB/setup %}
 
