@@ -55,3 +55,4 @@ It's static, so I can use github pages.
 
 [phaser]: http://phaser.io
 [svgedit]: https://code.google.com/p/svg-edit/
+[duck]: http://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg

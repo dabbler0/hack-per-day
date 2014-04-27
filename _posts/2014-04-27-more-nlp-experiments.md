@@ -66,7 +66,7 @@ where `S` is the [sigmoid] function and B is a linear function.
 
 Training is done with [MLE][MLE] scoring, and optimized using an iterative numeric method like [Stochastic Gradient Descent][gdescent] or [Brent's Approximation][brent]. I am going to use a very simplified form of Stochastic Gradient descent for my training.
 
-Boilerplate OOP: I'll add class `LogisticModel` extending `Estimator`. My input and output vectors will be the standard neural-net vectors for text -- unigram word counts. This makes my logistic model a little bit less powerful (generalisable) than the Markov Model before, but ultimately a `LogisticModel` can be used as the transition probability estimator for a [Conditional Random Field][crf], which is more powerful than a Markov Model.
+Boilerplate OOP: I'll add class `LogisticModel` extending `Estimator`. My input and output vectors will be the standard neural-net vectors for text -- unigram word counts. This makes my logistic model a little bit less powerful (generalisable) than the Markov Model before, but ultimately a `LogisticModel` can be used as the transition probability estimator for a [Conditional Random Field][CRF], which is more powerful than a Markov Model.
 
 Before I link `LogisticModel` into the `Estimator` interface, I'll deal with points the way that the `LogisticModel` naturally wants to -- accepting n-dimensional points with classifications and outputting the same. So, operations we can perform on a  `LogisticModel` are `feedPoint(point)`, `train()`, and `estimatePoint(vector)`. `train()` will take all the points given in `feedPoint()`, perform gradient descent on them to get the maximum-likelyhood model parameters, and then `estimatePoint(vector)` will apply the sigmoid function to estimate the probability using those parameters.
 
@@ -86,8 +86,12 @@ Time to write the tests. I'll be scoring Charles Dickens vs. Jane Austen again, 
 
 One thing I didn't incorporate into my estimator -- a bias term. This is actually necessary for mathematical rigor -- we need an element of the input vector that is **constant**, so as to make our linear combination function `B` general (otherwise all the linear combination functions would pass through (0,0,0...0)). So I added this in, and accuracy did not change much. I ramped up sample size to 1000, and the number of iterations for stochastic gradient descent, and accuracy went up slightly -- Dickens positive **99%** and Austen positive **70%**, for a total accuracy of **87%**. There seems to be a weird bias towards Dickens here, and I am not sure why. At any rate, this performs much worse (and also trains slower) than the smoothed NB classifier, so I'm ditching this concept for now.
 
-[Classify]: http://dabbler0.github.io/hack-per-day/2014/04/23/classyfi/
+[Classyfi]: http://dabbler0.github.io/hack-per-day/2014/04/23/classyfi/
 [EM]: http://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
 [lregression]: http://en.wikipedia.org/wiki/Logistic_regression
 [sigmoid]: http://en.wikipedia.org/wiki/Sigmoid_function
 [MLE]: http://en.wikipedia.org/wiki/Maximum_likelihood
+[CRF]: http://en.wikipedia.org/wiki/Conditional_random_field
+[brent]: http://en.wikipedia.org/wiki/Root-finding_algorithm#Brent.27s_method
+[gdescent]: http://en.wikipedia.org/wiki/Gradient_descent
+[tdpsola]: http://en.wikipedia.org/wiki/PSOLA
