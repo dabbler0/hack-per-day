@@ -86,6 +86,9 @@ Time to write the tests. I'll be scoring Charles Dickens vs. Jane Austen again, 
 
 One thing I didn't incorporate into my estimator -- a bias term. This is actually necessary for mathematical rigor -- we need an element of the input vector that is **constant**, so as to make our linear combination function `B` general (otherwise all the linear combination functions would pass through (0,0,0...0)). So I added this in, and accuracy did not change much. I ramped up sample size to 1000, and the number of iterations for stochastic gradient descent, and accuracy went up slightly -- Dickens positive **99%** and Austen positive **70%**, for a total accuracy of **87%**. There seems to be a weird bias towards Dickens here, and I am not sure why. At any rate, this performs much worse (and also trains slower) than the smoothed NB classifier, so I'm ditching this concept for now.
 
+## Launch
+So, I actually haven't launched this yet. I will soon.
+
 [Classyfi]: http://dabbler0.github.io/hack-per-day/2014/04/23/classyfi/
 [EM]: http://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
 [lregression]: http://en.wikipedia.org/wiki/Logistic_regression
