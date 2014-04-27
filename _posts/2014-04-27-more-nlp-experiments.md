@@ -8,11 +8,13 @@ tags: []
 {% include JB/setup %}
 
 ## Demo
+No demo yet, sorry! I'll put online demos alongisde the [Classyfi] demo in just a little bit.
 
 ## Conception
 Sorry I haven't posted in a while. I've been through a bunch of different failed signal-processing hacks (I was trying to do automatic music dictation and [TD-PSOLA][tdpsola] vocoding), which I might amalgamate into a collection sometime later. Anyway, what I'll show today is a couple other NLP techniques I wanted to try to implement in CoffeeScript. These are:
   - Unsupervised classification with [Estimation-Maximiziation][EM]
   - [Logistic regression][lregression] as an alternative to Naive Bayes.
+<!--more-->
 
 ## Tech
 These will be additions to the [Classyfi] library I posted earlier. Thus, they will be pure, environment-free CoffeeScript.
@@ -68,10 +70,24 @@ Boilerplate OOP: I'll add class `LogisticModel` extending `Estimator`. My input 
 
 Before I link `LogisticModel` into the `Estimator` interface, I'll deal with points the way that the `LogisticModel` naturally wants to -- accepting n-dimensional points with classifications and outputting the same. So, operations we can perform on a  `LogisticModel` are `feedPoint(point)`, `train()`, and `estimatePoint(vector)`. `train()` will take all the points given in `feedPoint()`, perform gradient descent on them to get the maximum-likelyhood model parameters, and then `estimatePoint(vector)` will apply the sigmoid function to estimate the probability using those parameters.
 
-My formula for stochastic gradient descent I'll copy from [these lecture notes][lnotes]. I was pretty tired writing this, so I ran into a couple dumb typos that gave mysterious NaN answers. But I worked these out. Okay, so I have the code, but I have no idea whether it works as an estimator or not, so I need to link this into the `Estimator` interface and run some tests.
+Time to write Stochastic Gradient Descent. Basic formula is:
+```
+for each tag, document in corpus
+  for each i in B (B is the linear combination vector)
+    B[i] += LEARNING_RATE * (tag - estimate(vector)) * vector[i]
+```
+Honestly, I have no idea why this actually works. But the basic form of gradient descent is that we move along a secant/tangent line to the function in the upward direction, and repeat until we get to a maximum. This formula is the result of gradient descent applied to the sigmoid function, which has a well-defined derivative.
+
+I was pretty tired writing this, so I ran into a couple dumb typos that gave mysterious NaN answers. But I worked these out. Okay, so I have the code, but I have no idea whether it works as an estimator or not, so I need to link this into the `Estimator` interface and run some tests.
 
 Linking into the `Estimator` interface should not be difficult -- I'll just put simple wrapper functions up that will populate a vector with unigram counts. Great, that's done.
 
 Time to write the tests. I'll be scoring Charles Dickens vs. Jane Austen again, with the same training and test data as earlier, to test this against my HO-smoothed Naive Bayes unigram model from earlier. I run the tests, and the results are a little strange. We can identify Dickens as Dickens with **80%** accuracy, but Austen is identified as Dickens over **35%** of the time (**65% accuracy**). That's no good!
 
 One thing I didn't incorporate into my estimator -- a bias term. This is actually necessary for mathematical rigor -- we need an element of the input vector that is **constant**, so as to make our linear combination function `B` general (otherwise all the linear combination functions would pass through (0,0,0...0)). So I added this in, and accuracy did not change much. I ramped up sample size to 1000, and the number of iterations for stochastic gradient descent, and accuracy went up slightly -- Dickens positive **99%** and Austen positive **70%**, for a total accuracy of **87%**. There seems to be a weird bias towards Dickens here, and I am not sure why. At any rate, this performs much worse (and also trains slower) than the smoothed NB classifier, so I'm ditching this concept for now.
+
+[Classify]: http://dabbler0.github.io/hack-per-day/2014/04/23/classyfi/
+[EM]: http://en.wikipedia.org/wiki/Expectation%E2%80%93maximization_algorithm
+[lregression]: http://en.wikipedia.org/wiki/Logistic_regression
+[sigmoid]: http://en.wikipedia.org/wiki/Sigmoid_function
+[MLE]: http://en.wikipedia.org/wiki/Maximum_likelihood
