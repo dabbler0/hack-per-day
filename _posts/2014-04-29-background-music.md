@@ -47,3 +47,5 @@ This was pretty simple and I guess it was more art than hacking. Anyway, enjoy.
 
 ## Launch
 It's static, so I can use github pages.
+
+[midijs]: http://mudcu.be/midi-js/
