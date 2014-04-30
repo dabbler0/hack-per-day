@@ -17,10 +17,8 @@ tags:
 [http://dabbler0.github.io/midiprov](http://dabbler0.github.io/midiprov)
 
 ## Conception
-Part of the point of my future auto-mashup project will be to take a step towards generative music.
-But music doesn't have to be artistic to be pleasant, and I kind of wanted a soft, unambitious background
-music to play while I study that doesn't interfere with thinking but nevertheless keeps changing.
-So I decided to make some randomly-generated jazz-like sounds.
+Part of the point of my future auto-mashup project will be to take a step towards generative music. But music doesn't have to be artistic to be pleasant, and I kind of wanted a soft, unambitious background music to play while I study that doesn't interfere with thinking but nevertheless keeps changing. So I decided to make some randomly-generated jazz-like sounds.
+<!--more-->
 
 ## Tech
 This is going to be static, in CoffeeScript, built on [MIDI.js][midijs].
