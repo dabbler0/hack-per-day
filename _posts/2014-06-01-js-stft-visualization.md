@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "JS STFT visualization"
+title: "JS STFT Visualization"
+date: 2014-06-01 22:00:00
 description: ""
 category: 
 tags:

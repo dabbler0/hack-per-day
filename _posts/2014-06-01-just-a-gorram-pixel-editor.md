@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Just a Gorram Pixel Editor"
+date: 2014-06-01 20:00:00
 description: ""
 category: 
 tags:
