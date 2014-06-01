@@ -27,7 +27,7 @@ Tech
 
 Hack
 ----
-  First things first, I need to generate the table of frame:frequency:power. This should be pretty easy; I can basically copy the code from [audioshift] (update: I cannot; see below). I would be slightly worried about performance here, but audioshift seemed to work out fine, so I'll leave it as is.
+  First things first, I need to generate the table of frame:frequency:power. This should be pretty easy; I can basically copy the code from [audioshift][audioshift] (update: I cannot; see below). I would be slightly worried about performance here, but audioshift seemed to work out fine, so I'll leave it as is.
 
   Okay, time to pipe this into my JS 3D surface plotter. Looks simple enough -- I simply need to fill out a Google Viz API table, and pass that table to Greg Ross's thing. I can almost copy his tutorial verbatim. Great!
 
@@ -42,3 +42,6 @@ Hack
 Launch
 ------
   There's no launch for this. It's really a personal tool. However, if you want to use it, just download the repo; it includes a binary `app.nw`.
+
+[audioshift]: http://dabbler0.github.io/hack-per-day/2014/04/20/coffeescript-phase-vocoder/
+[gh]: github.com/dabbler0/audioviz
