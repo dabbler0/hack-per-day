@@ -45,4 +45,4 @@ Launch
   There's no launch for this. It's really a personal tool. However, if you want to use it, just download the repo; it includes a binary `app.nw`.
 
 [audioshift]: http://dabbler0.github.io/hack-per-day/2014/04/20/coffeescript-phase-vocoder/
-[gh]: github.com/dabbler0/audioviz
+[gh]: http://github.com/dabbler0/audioviz
