@@ -14,7 +14,7 @@ tags:
 
 Demo
 ----
-[http://dabbler0.github.io/jgpe/]([http://dabbler0.github.io/jgpe/)
+[http://dabbler0.github.io/jgpe/](http://dabbler0.github.io/jgpe/)
 
 Conception
 ----------
