@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "Animated Chessboard BFS"
-description: ""
-category: 
-tags: []
+tags:
+ - visualization
+ - coffeescript
+ - gh_pages
+ - html5_canvas
+ - browser
 ---
 {% include JB/setup %}
 
