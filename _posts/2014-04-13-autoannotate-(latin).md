@@ -12,7 +12,7 @@ tags:
 {% include JB/setup %}
 
 ## Demo
-[http://ecc.exeter.edu/latin/index.html](http://ecc.exeter.edu/latin/index.html)
+[http://bit.ly/autolatin](http://bit.ly/autolatin)
 
 ## Conception
   Another hack from Latin class. I expect over a third of my time doing Latin homework is spent turning pages in my book to look at line notes or the dictionary. I can fix the second one by automating word lookup.
@@ -43,6 +43,8 @@ tags:
   *UPDATE*: Of course, Koding's VMs are for development purpose only and are not production machines. Koding turns off a VM after 15 minutes; I need to manually turn it back on (and I'm pretty sure having a bot do that violates EULA). Anyway, so you probably won't be able to see the demo unless I'm looking at it at the same time. I'm shopping around for a better hosting service.
 
   *UPDATE*: A lot of my Latin classmates want to use this tool, so I'm going to host it on the Exeter Computing Club servers. I don't want to sit on port 80 there, though, so I'll have to write a simple proxy script to serve at the front for now. The demo should be readily accessible.
+
+  *UPDATE* The Exeter Computing Club servers go down too frequently to be really usable, so now it's on my Amazon AWS EC2 instance.
 
   I may want to actually port Words to CoffeeScript sometime later, but that will require me to either learn more Latin or learn Ada, which is more of a "week" thing than a "couple hours".
 
