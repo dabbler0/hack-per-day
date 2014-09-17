@@ -14,22 +14,22 @@ tags:
 {% include JB/setup %}
 
 Demo
-====
+----
 `telnet ec2-54-68-162-49.us-west-2.compute.amazonaws.com`
 
 Conception
-=========
+----------
 As I said in my last post, this past weekend I spent approximately way too long playing Achaea. Upon some research, I found a ton of good multi-user text adventures but no good multi-user roguelikes (Interhack? I can't find a server anywhere).
 
 So, I decided to make one! I have some game mechanics in mind but I won't flesh them out here, because they are too numerous and too subject to change. For today I will implement basic board/player movement support and field-of-vision computation.
 <!--more-->
 
 Tech
-====
+----
 As per modus operandi meus, I will be using CoffeeScript. I will run a little telnet server with node.js, which seems not to be a new frontier.
 
 Hack
-====
+----
 O-kay, lots of setup time. OOP first. I need structs for the game board, floor tiles, and space for denizens and objects eventually. I lay down classes `FloorCell` and `GameBoard` (2d array of `FloorCell` objects) and construct `FloorCell` to have room for some item contents, and also a terrain type.
 
 Okay, great. Can't test yet, because there's nothing there, but I can start doing shadowcasting. I'm going to implement [this guy's algorithm][shadowcasting]. I considered briefly just taking his code, but his thing is so regimented (it's almost Java-esque) I feel like it would be easier (and more educational) to just write it myself.
@@ -49,7 +49,7 @@ Okay, great! Time to test. I render things, and typo is immediately clear -- the
 Time to port to telnet and make it multiuser! I find an npm telnet library and pull off hello world with it. Then I try to cut-and-paste my tty interface into it, which works for the most part after some typo resolution. In order to make it multiuser, I do a simple event handler system and bind render handlers to it for each client. I call the all handlers whenever a change occurs from any user. Great! Things work well. I can connect with multiple users and the users can see each other move about. Launch time!
 
 Launch
-======
+------
 I don't know any good telnet hosting service, so I'll put this one on aws ec2. Immediately, a couple bugs -- if the lag is such that multiple characters come through at once they are not recognized (because "hh" !== "h" and "h"). This is easy to resolve; when I recieve a multichar string I split and iterate. Second, we throw errors when we try to render for people who have disconnected. This is also easy to resolve; I unbind handlers on disconnect.
 
 Great! Everything seems to work. It's a bit laggy, but I think that's just ec2 free tier being cheap. Donate, anyone?
